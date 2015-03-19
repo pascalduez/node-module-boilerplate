@@ -1,0 +1,41 @@
+{
+  "name": "<%= moduleName %>",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+  ],
+  "author": {
+    "name": "Pascal Duez",
+    "url": "https://github.com/pascalduez"
+  },
+  "homepage": "https://github.com/pascalduez/<%= moduleName %>",
+  "bugs": "https://github.com/pascalduez/<%= moduleName %>/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pascalduez/<%= moduleName %>.git"
+  },
+  "license": {
+    "type": "unlicence",
+    "url": "http://unlicense.org"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "index.js",
+    "README.md",
+    "UNLICENSE"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "*",
+    "babel-eslint": "*",
+    "coveralls": "*",
+    "eslint": "*",
+    "faucet": "*",
+    "istanbul": "*",
+    "tape": "*"
+  },
+  "scripts": {
+    "test": "make lint dist test"
+  }
+}
