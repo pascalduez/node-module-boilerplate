@@ -36,6 +36,6 @@
     "tape": "*"
   },
   "scripts": {
-    "test": "make lint dist test"
+    "test": "make"
   }
 }
