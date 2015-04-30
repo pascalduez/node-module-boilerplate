@@ -30,9 +30,18 @@ rules:
   quotes: [2, "single"]
   indent: [2, 2]
   no-mixed-spaces-and-tabs: [2, "smart-tabs"]
-  no-spaced-func: 1
-  space-after-keywords: [1, "always"]
-  space-before-function-parentheses: [1, {"anonymous": "always", "named": "never"}]
-  space-before-blocks: [1, "always"]
-  space-in-brackets: [1, "always"]
   no-underscore-dangle: 0
+  no-spaced-func: 1
+  space-before-blocks: [1, "always"]
+  space-after-keywords: [1, "always"]
+  space-before-function-parentheses: [1, {
+    "anonymous": "always",
+    "named": "never" }]
+  space-in-brackets: [1, "always", {
+    "singleValue": false,
+    "objectsInArrays": false,
+    "arraysInArrays": false,
+    "arraysInObjects": false,
+    "objectsInObjects": false,
+    "propertyName": false }]
+
