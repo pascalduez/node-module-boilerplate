@@ -26,10 +26,10 @@
   "devDependencies": {
     "babel": "*",
     "babel-eslint": "*",
+    "babel-istanbul": "*",
     "coveralls": "*",
     "eslint": "*",
     "faucet": "*",
-    "istanbul": "*",
     "tape": "*"
   },
   "scripts": {
