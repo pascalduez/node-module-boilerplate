@@ -30,6 +30,7 @@
     "coveralls": "*",
     "eslint": "*",
     "faucet": "*",
+    "opn-cli": "*",
     "tape": "*"
   },
   "scripts": {
