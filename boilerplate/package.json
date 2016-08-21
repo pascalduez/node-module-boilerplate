@@ -24,8 +24,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "babel": "*",
+    "babel-cli": "*",
     "babel-eslint": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-0": "*",
     "babel-istanbul": "*",
     "coveralls": "*",
     "eslint": "*",
