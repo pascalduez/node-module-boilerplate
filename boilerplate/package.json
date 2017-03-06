@@ -29,7 +29,7 @@
     "typecheck:coverage": "flow-coverage-report -t test -t html ./src/**/*.js",
     "validate": "npm-run-all lint typecheck",
     "test": "jest",
-    "test:ci": "NODE_ENV=CI npm test -- --runInBand --coverage ",
+    "test:ci": "NODE_ENV=CI npm text -- --runInBand --coverage ",
     "coveralls": "(cat ./coverage/lcov.info | coveralls) || exit 0",
     "clean": "rm -rf ./dist",
     "build:js": "babel ./src -d ./dist --ignore '*.spec.js'",
