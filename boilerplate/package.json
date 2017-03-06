@@ -22,20 +22,46 @@
     "README.md",
     "UNLICENSE"
   ],
+  "scripts": {
+    "lint:js": "eslint ./src",
+    "lint": "npm-run-all lint:*",
+    "typecheck": "flow check ./src",
+    "typecheck:coverage": "flow-coverage-report -t test -t html ./src/**/*.js",
+    "validate": "npm-run-all lint typecheck",
+    "test": "jest",
+    "test:ci": "NODE_ENV=CI npm test -- --runInBand --coverage ",
+    "coveralls": "(cat ./coverage/lcov.info | coveralls) || exit 0",
+    "clean": "rm -rf ./dist",
+    "build:js": "babel ./src -d ./dist --ignore '*.spec.js'",
+    "build:flow": "flow-copy-source -v -i '**/*.spec.js' ./src ./dist",
+    "build": "npm-run-all clean build:*",
+    "prepublish": "npm run build"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/index.js"
+    ],
+    "setupTestFrameworkScriptFile": "./scripts/setupTests.js"
+  },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-eslint": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-stage-0": "*",
-    "babel-istanbul": "*",
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
+    "ci-info": "^1.0.0",
     "coveralls": "*",
-    "eslint": "*",
-    "faucet": "*",
-    "opn-cli": "*",
-    "tape": "*"
-  },
-  "scripts": {
-    "test": "make"
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^19.0.1",
+    "flow-bin": "^0.40.0",
+    "flow-copy-source": "^1.1.0",
+    "flow-coverage-report": "^0.3.0",
+    "jest": "^19.0.2",
+    "npm-run-all": "^4.0.2"
   }
 }

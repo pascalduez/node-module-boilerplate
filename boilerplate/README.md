@@ -9,7 +9,7 @@
 ## Installation
 
 ```
-npm install <%= moduleName %> --save-dev
+npm install <%= moduleName %> --save
 ```
 
 ## Usage
